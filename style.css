@@ -1,0 +1,185 @@
+/* _styles.scss */
+@import url("https://fonts.googleapis.com/css?family=Russo+One");
+body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  color: #fff;
+  margin: 0 auto 40px;
+  text-shadow: 0 2px 0 #0e121b;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+h1.hidden {
+  opacity: 0;
+}
+
+body {
+  -webkit-box-align: center;
+          align-items: center;
+  background: #202738;
+  display: -webkit-box;
+  display: flex;
+  font-family: "Russo One", sans-serif;
+  height: 100vh;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin: 0;
+  width: 100vw;
+}
+
+.container {
+  text-align: center;
+}
+
+.text {
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+.text.hidden {
+  opacity: 0;
+}
+.text h1.hidden {
+  display: none;
+}
+
+.controls {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  overflow: hidden;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+.controls.hidden {
+  opacity: 0;
+}
+
+.button-teal {
+  border-radius: 4px;
+  cursor: pointer;
+  font: bold 20px "Russo One", sans-serif;
+  letter-spacing: 1px;
+  padding: 8px 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  text-transform: uppercase;
+  width: 160px;
+  background: #2fbdb3;
+  border-bottom: 4px solid #21827a;
+  color: #fff;
+  text-shadow: 0 2px 0 #21827a;
+}
+.button-teal.hidden {
+  display: none;
+}
+.button-teal:active {
+  background: #21827a;
+  border-bottom: 0;
+  margin-top: 4px;
+}
+
+.button-red {
+  border-radius: 4px;
+  cursor: pointer;
+  font: bold 20px "Russo One", sans-serif;
+  letter-spacing: 1px;
+  padding: 8px 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  text-transform: uppercase;
+  width: 160px;
+  background: #f14e59;
+  border-bottom: 4px solid #ad3237;
+  color: #fff;
+  text-shadow: 0 2px 0 #ad3237;
+}
+.button-red.hidden {
+  display: none;
+}
+.button-red:active {
+  background: #ad3237;
+  border-bottom: 0;
+  margin-top: 4px;
+}
+
+.button {
+  border-radius: 4px;
+  cursor: pointer;
+  font: bold 20px "Russo One", sans-serif;
+  letter-spacing: 1px;
+  padding: 8px 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  text-transform: uppercase;
+  width: 160px;
+  border: 2px solid #dce4e7;
+  color: #dce4e7;
+}
+.button.hidden {
+  display: none;
+}
+.button:active {
+  border-color: #fff;
+  color: #fff;
+}
+
+.revolver {
+  background: #0e121b;
+  border-radius: 50%;
+  box-shadow: 0 0 0 16px #0e121b;
+  height: 240px;
+  width: 240px;
+  -webkit-transition: -webkit-transform 2s ease;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
+}
+.revolver.fired .cover {
+  fill: #f14e59;
+}
+.revolver.fired .chambers,
+.revolver.fired .bullet.fired {
+  fill: #f14e59;
+  -webkit-transition: fill 0.5s ease;
+  transition: fill 0.5s ease;
+}
+.revolver .cover,
+.revolver .chambers,
+.revolver .bullet {
+  fill: #dce4e7;
+}
+.revolver .cover {
+  opacity: 0;
+  -webkit-transition: fill 0.5s ease, opacity 0.5s ease;
+  transition: fill 0.5s ease, opacity 0.5s ease;
+}
+.revolver .cover.active {
+  opacity: 1;
+}
+.revolver .bullet {
+  fill: transparent;
+  -webkit-transition: fill 0.25s ease;
+  transition: fill 0.25s ease;
+}
+.revolver .bullet.loaded {
+  fill: #dce4e7;
+}
+.revolver .bullet.fired {
+  fill: #f14e59;
+}
